@@ -21,7 +21,10 @@ opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
-opt.fillchars='eob: '
+opt.fillchars = {
+ eob = " ",
+ vert = "|",
+}
 -- Behaviour
 opt.hidden = true
 opt.errorbells = false
@@ -37,3 +40,5 @@ opt.mouse:append('a')
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
+
+

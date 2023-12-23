@@ -8,6 +8,11 @@ return
   },
   config = 
   {
+    renderer = {
+      indent_markers = {
+        enable = true,
+      }
+    },
     filters = 
     {
       dotfiles

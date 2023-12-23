@@ -13,7 +13,7 @@ local config = function()
     snippet =
     {
       expand = function(args)
-        luasnip.lso_expand(args.body)
+        luasnip.lsp_expand(args.body)
       end,
     },
     mapping = cmp.mapping.preset.insert(

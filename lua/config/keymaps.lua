@@ -34,3 +34,5 @@ keymap.set('n' , '<leader-F5>' , vim.cmd.UndotreeToggle)
 
 -- toggle term
 keymap.set('n' , '<leader>h' , ":ToggleTerm<CR>", {noremap = true , silent = true})
+-- lsp buffer show
+keymap.set('n' , '<leader>m' , ":lua vim.lsp.buf.hover()<CR>" , {noremap = true , silent = true})
