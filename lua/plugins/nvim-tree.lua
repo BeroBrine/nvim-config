@@ -13,9 +13,8 @@ return
         enable = true,
       }
     },
-    filters = 
-    {
-      dotfiles
+    filters = {
+      dotfiles ,
     }
-  }
+  }, 
 }
