@@ -41,4 +41,3 @@ opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
 
-

@@ -14,7 +14,7 @@ keymap.set("n" , "<C-tab>" , ":bn<CR>" , {noremap = true})
 keymap.set("n" , "<leader>sv" , ":vsplit<CR>" , opts) -- Split Vertical
 keymap.set("n" , "<leader>sh" , ":split<CR>" , opts) -- Split Horizontally
 keymap.set("n" , "<leader>sm" , ":MaximizeToggle<CR>" , opts) -- Toggle Minimize
-
+keymap.set("n" , "<C-c>" , ":q!<CR>" , {noremap = true , silent = true}) -- Toggle Minimize
 --Keys
 keymap.set("i" , "<C-j>" , "<Down>" , {noremap = true , silent = true})
 keymap.set("i" , "<C-k>" , "<Up>" , {noremap = true , silent = true})
