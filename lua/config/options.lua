@@ -41,3 +41,7 @@ opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
 opt.mousemoveevent = true
+
+
+-- font and size
+opt.guifont = {"Cartograph CF" , ":13"}
