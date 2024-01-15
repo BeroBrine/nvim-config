@@ -41,3 +41,6 @@ keymap.set('i' , '<C-e>' , "=" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>a' , ":wqa<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>s' , ":wq<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>w' , ":q!<CR>" , {noremap = true , silent = true})
+-- bufferline
+keymap.set('n' , '<tab>' , ":BufferLineCycleNext<CR>" , {noremap = true , silent = true})
+keymap.set('n' , '<S-tab>' , ":BufferLineCyclePrev<CR>" , {noremap = true , silent = true})
