@@ -44,4 +44,3 @@ opt.mousemoveevent = true
 
 
 -- font and size
-opt.guifont = {"Cartograph CF" , ":15"}

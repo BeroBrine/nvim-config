@@ -49,7 +49,7 @@ keymap.set('n' , '<C-x>' , ":BufferLineCloseOthers<CR>" , {noremap = true , sile
 keymap.set('n' , '<C-d>' , "vi'" , {nowait = true , remap = true , silent = true})
 keymap.set('n' , '<C-f>' , 'vi"' , {nowait = true , remap = true , silent = true})
 keymap.set('n' , '<C-b>' , 'vib' , {nowait = true , remap = true , silent = true})
-keymap.set('n' , '<C-b>' , 'vib' , {nowait = true , remap = true , silent = true})
+keymap.set('n' , '<C-g>' , 'viB' , {nowait = true , remap = true , silent = true})
 --
 keymap.set('n' , '<C-k>' , '3k' , {nowait = true , remap = true , silent = true})
 keymap.set('n' , '<C-j>' , '3j' , {nowait = true , remap = true , silent = true})
