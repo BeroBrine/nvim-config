@@ -37,7 +37,6 @@ keymap.set('n' , '<leader>h' , ":ToggleTerm<CR>", {noremap = true , silent = tru
 -- lsp buffer show
 keymap.set('n' , '<leader>m' , ":lua vim.lsp.buf.hover()<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-s>' , ":w<CR>" , {noremap = true , silent = true})
-keymap.set('i' , '<C-e>' , "=" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>a' , ":wqa<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>s' , ":wq<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-q>w' , ":q!<CR>" , {noremap = true , silent = true})
@@ -45,3 +44,12 @@ keymap.set('n' , '<C-q>w' , ":q!<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<tab>' , ":BufferLineCycleNext<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<S-tab>' , ":BufferLineCyclePrev<CR>" , {noremap = true , silent = true})
 keymap.set('n' , '<C-x>' , ":BufferLineCloseOthers<CR>" , {noremap = true , silent = true})
+-- 
+
+keymap.set('n' , '<C-d>' , "vi'" , {nowait = true , remap = true , silent = true})
+keymap.set('n' , '<C-f>' , 'vi"' , {nowait = true , remap = true , silent = true})
+keymap.set('n' , '<C-b>' , 'vib' , {nowait = true , remap = true , silent = true})
+keymap.set('n' , '<C-b>' , 'vib' , {nowait = true , remap = true , silent = true})
+--
+keymap.set('n' , '<C-k>' , '3k' , {nowait = true , remap = true , silent = true})
+keymap.set('n' , '<C-j>' , '3j' , {nowait = true , remap = true , silent = true})
