@@ -46,5 +46,7 @@ return
     keymap.set("n" , "<leader>fa" , ":Telescope <CR>"),
     keymap.set("n" , "<leader>fg" , ":Telescope live_grep<CR>"),
     keymap.set("n" , "<leader>fb" , ":Telescope buffers<CR>"),
+    keymap.set("n" , "<leader>cs" , ":Telescope colorscheme<CR>"),
+    keymap.set("n" , "<leader>fo" , ":Telescope oldfiles<CR>"),
   },
 }
