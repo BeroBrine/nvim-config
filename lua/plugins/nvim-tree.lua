@@ -1,12 +1,12 @@
 return
 {
-  "nvim-tree/nvim-tree.lua" ,
+  "nvim-tree/nvim-tree.lua",
   lazy = false,
-  dependencies = 
+  dependencies =
   {
-    "nvim-tree/nvim-web-devicons" , 
+    "nvim-tree/nvim-web-devicons",
   },
-  config = 
+  config =
   {
     renderer = {
       indent_markers = {
@@ -14,7 +14,7 @@ return
       }
     },
     filters = {
-      dotfiles ,
+      dotfiles,
     }
-  }, 
+  },
 }

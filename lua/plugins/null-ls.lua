@@ -1,11 +1,11 @@
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local null_ls = require("null-ls")
 local config = function()
+  local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+  local null_ls = require("null-ls")
   null_ls.setup({
     sources = {
-      null_ls.builtins.diagnostics.biome,
-      null_ls.builtins.formatting.biome,
-      null_ls.builtins.formatting.stylua,
+      null_ls.builtins.diagnostics.biome, -- for js and ts lsp
+      null_ls.builtins.formatting.biome, -- for js and ts lsp
+      null_ls.builtins.formatting.stylua, -- for lua
     },
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {}),
     on_attach = function(client, bufnr)

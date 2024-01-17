@@ -1,55 +1,61 @@
 local keymap = vim.keymap
 
--- Directory Navigation
-keymap.set("n" , "<leader>t" , ":NvimTreeFocus<CR>" , { noremap = true , silent = true }) 
-keymap.set("n" , "<leader>n" , ":NvimTreeToggle<CR>" , { noremap = true , silent = true })
+-- directory navigation
+keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
---Pane Navigation
-keymap.set("n" , "<C-h>" , "<C-w>h" , opts) -- Navigate left
-keymap.set("n" , "<C-j>" , "<C-w>j" , opts) -- Navigate Down
-keymap.set("n" , "<C-k>" , "<C-w>k" , opts) -- Navigate Up  
-keymap.set("n" , "<C-l>", "<C-w>l" , opts) -- Navigate Right
-keymap.set("n" , "<C-tab>" , ":bn<CR>" , {noremap = true})
--- Window Management 
-keymap.set("n" , "<leader>sv" , ":vsplit<CR>" , opts) -- Split Vertical
-keymap.set("n" , "<leader>sh" , ":split<CR>" , opts) -- Split Horizontally
-keymap.set("n" , "<leader>sm" , ":MaximizeToggle<CR>" , opts) -- Toggle Minimize
-keymap.set("n" , "<C-c>" , ":q!<CR>" , {noremap = true , silent = true}) -- Toggle Minimize
---Keys
-keymap.set("i" , "<C-j>" , "<Down>" , {noremap = true , silent = true})
-keymap.set("i" , "<C-k>" , "<Up>" , {noremap = true , silent = true})
-keymap.set("i" , "<C-h>" , "<Left>" , {noremap = true , silent = true})
-keymap.set("i" , "<C-l>" , "<Right>" , {noremap = true , silent = true})
+--pane navigation
+keymap.set("n", "<c-h>", "<c-w>h", opts) -- navigate left
+keymap.set("n", "<c-j>", "<c-w>j", opts) -- navigate down
+keymap.set("n", "<c-k>", "<c-w>k", opts) -- navigate up
+keymap.set("n", "<c-l>", "<c-w>l", opts) -- navigate right
+keymap.set("n", "<c-tab>", ":bn<cr>", { noremap = true })
+-- window management
+keymap.set("n", "<leader>sv", ":vsplit<cr>", opts)                     -- split vertical
+keymap.set("n", "<leader>sh", ":split<cr>", opts)                      -- split horizontally
+keymap.set("n", "<leader>sm", ":maximizetoggle<cr>", opts)             -- toggle minimize
+keymap.set("n", "<c-c>", ":q!<cr>", { noremap = true, silent = true }) -- toggle minimize
+--keys
+keymap.set("i", "<c-j>", "<down>", { noremap = true, silent = true })
+keymap.set("i", "<c-k>", "<up>", { noremap = true, silent = true })
+keymap.set("i", "<c-h>", "<left>", { noremap = true, silent = true })
+keymap.set("i", "<c-l>", "<right>", { noremap = true, silent = true })
 
 -- comment
-vim.api.nvim_set_keymap("n" , "<C-/>" , "gcc" , {noremap = true })
-vim.api.nvim_set_keymap("v" , "<C-/>" , "gcc" , {noremap = true })
+vim.api.nvim_set_keymap("n", "<c-/>", "gcc", { noremap = true })
+vim.api.nvim_set_keymap("v", "<c-/>", "gcc", { noremap = true })
 
 --indenting
-keymap.set("v" , "<" , "<gv")
-keymap.set("v" , ">" , ">gv") 
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
 
 --undo tree
-keymap.set('n' , '<leader-F5>' , vim.cmd.UndotreeToggle)
+keymap.set('n', '<leader-f5>', vim.cmd.undotreetoggle)
 
 -- toggle term
-keymap.set('n' , '<leader>h' , ":ToggleTerm<CR>", {noremap = true , silent = true})
+keymap.set('n', '<leader>h', ":ToggleTerm<cr>", { noremap = true, silent = true })
 -- lsp buffer show
-keymap.set('n' , '<leader>m' , ":lua vim.lsp.buf.hover()<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<C-s>' , ":w<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<C-q>a' , ":wqa<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<C-q>s' , ":wq<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<C-q>w' , ":q!<CR>" , {noremap = true , silent = true})
+keymap.set('n', '<leader>m', ":lua vim.lsp.buf.hover()<cr>", { noremap = true, silent = true })
+keymap.set('n', '<c-s>', ":w<cr>", { noremap = true, silent = true })
+keymap.set('n', '<c-q>a', ":wqa<cr>", { noremap = true, silent = true })
+keymap.set('n', '<c-q>s', ":wq<cr>", { noremap = true, silent = true })
+keymap.set('n', '<c-q>w', ":q!<cr>", { noremap = true, silent = true })
 -- bufferline
-keymap.set('n' , '<tab>' , ":BufferLineCycleNext<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<S-tab>' , ":BufferLineCyclePrev<CR>" , {noremap = true , silent = true})
-keymap.set('n' , '<C-x>' , ":BufferLineCloseOthers<CR>" , {noremap = true , silent = true})
--- 
-
-keymap.set('n' , '<C-d>' , "vi'" , {nowait = true , remap = true , silent = true})
-keymap.set('n' , '<C-f>' , 'vi"' , {nowait = true , remap = true , silent = true})
-keymap.set('n' , '<C-b>' , 'vib' , {nowait = true , remap = true , silent = true})
-keymap.set('n' , '<C-g>' , 'viB' , {nowait = true , remap = true , silent = true})
+keymap.set('n', '<tab>', ":bufferlinecyclenext<cr>", { noremap = true, silent = true })
+keymap.set('n', '<s-tab>', ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
+keymap.set('n', '<c-x>', ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
 --
-keymap.set('n' , '<C-k>' , '3k' , {nowait = true , remap = true , silent = true})
-keymap.set('n' , '<C-j>' , '3j' , {nowait = true , remap = true , silent = true})
+
+keymap.set('n', '<c-d>', "vi'", { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-f>', 'vi"', { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-b>', 'vib', { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-g>', 'vib', { nowait = true, remap = true, silent = true })
+--
+keymap.set('n', '<c-k>', '3k', { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-j>', '3j', { nowait = true, remap = true, silent = true })
+-- debugger
+vim.keymap.set('n', '<leader>dc', ":DapContinue<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ds', ":DapStepOver<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>di', ":DapStepInto<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>do', ":DapStepOut<CR>", { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>db', ":DapToggleBreakpoint<CR>", { noremap = true, silent = true })
