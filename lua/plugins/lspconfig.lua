@@ -78,9 +78,24 @@ return {
     })
 
     -- configure typescript server with plugin
-    lspconfig["biome"].setup({
+    lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      handlers = {
+        ["textDocument/publishDiagnostics"] = function(_, params, client_id, _, config)
+          if params.diagnostics ~= nil then
+            local idx = 1
+            while idx <= #params.diagnostics do
+              if params.diagnostics[idx].code == 80001 then
+                table.remove(params.diagnostics, idx)
+              else
+                idx = idx + 1
+              end
+            end
+          end
+          vim.lsp.diagnostic.on_publish_diagnostics(_, params, client_id, _, config)
+        end,
+      },
     })
 
     -- configure css server
@@ -89,13 +104,7 @@ return {
       on_attach = on_attach,
     })
 
-    -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
     -- configure asm server
-
     lspconfig["asm_lsp"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
@@ -144,28 +153,28 @@ return {
       on_attach = on_attach,
     })
     lspconfig["clangd"].setup(
-    {
-      capabilities = capabilities , 
-      on_attach = on_attach , 
-    })
+      {
+        capabilities = capabilities,
+        on_attach = on_attach,
+      })
 
     lspconfig["rust_analyzer"].setup(
-    {
-      capabilities = capabilities , 
-      on_attach = on_attach , 
-      filetypes = {"rust"} ,
-      root_dir = util.root_pattern("Cargo.toml") ,
-      settings = 
       {
-        ['rust-analyzer'] = 
+        capabilities = capabilities,
+        on_attach = on_attach,
+        filetypes = { "rust" },
+        root_dir = util.root_pattern("Cargo.toml"),
+        settings =
         {
-          cargo = 
+          ['rust-analyzer'] =
           {
-            allFeatures = true ,
-          } , 
-        }, 
-      }
-    })
+            cargo =
+            {
+              allFeatures = true,
+            },
+          },
+        }
+      })
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
