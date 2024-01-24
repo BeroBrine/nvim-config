@@ -3,7 +3,7 @@ local config = function()
   local null_ls = require("null-ls")
   null_ls.setup({
     sources = {
-      null_ls.builtins.diagnostics.biome, -- for js and ts lsp
+      null_ls.builtins.diagnostics.oxlint, -- for js and ts lsp
       null_ls.builtins.formatting.biome, -- for js and ts lsp
       null_ls.builtins.formatting.stylua, -- for lua
     },

@@ -32,8 +32,6 @@ keymap.set("v", ">", ">gv")
 --undo tree
 keymap.set('n', '<leader-f5>', vim.cmd.undotreetoggle)
 
--- toggle term
-keymap.set('n', '<leader>h', ":ToggleTerm<cr>", { noremap = true, silent = true })
 -- lsp buffer show
 keymap.set('n', '<leader>m', ":lua vim.lsp.buf.hover()<cr>", { noremap = true, silent = true })
 keymap.set('n', '<c-s>', ":w<cr>", { noremap = true, silent = true })
@@ -45,14 +43,15 @@ keymap.set('n', '<tab>', ":bufferlinecyclenext<cr>", { noremap = true, silent = 
 keymap.set('n', '<s-tab>', ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
 keymap.set('n', '<c-x>', ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
 --
-
 keymap.set('n', '<c-d>', "vi'", { nowait = true, remap = true, silent = true })
 keymap.set('n', '<c-f>', 'vi"', { nowait = true, remap = true, silent = true })
 keymap.set('n', '<c-b>', 'vib', { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-g>', 'vib', { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-a>', 'vi<', { nowait = true, remap = true, silent = true })
 --
 keymap.set('n', '<c-k>', '3k', { nowait = true, remap = true, silent = true })
 keymap.set('n', '<c-j>', '3j', { nowait = true, remap = true, silent = true })
+keymap.set('n', '<return>', 'o', { nowait = true, remap = true, silent = true })
+
 -- debugger
 vim.keymap.set('n', '<leader>dc', ":DapContinue<CR>", { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>ds', ":DapStepOver<CR>", { noremap = true, silent = true })
