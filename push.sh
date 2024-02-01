@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-echo -n "enter the commit message"
+echo -n "enter the commit message "
 read commit
 
 git add *

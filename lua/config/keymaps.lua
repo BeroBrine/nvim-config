@@ -1,15 +1,9 @@
 local keymap = vim.keymap
 
 -- directory navigation
-keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", { noremap = true, silent = true })
-keymap.set("n", "<leader>n", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { noremap = true, silent = true })
+keymap.set("n", "<leader>nb", ":Neotree buffers<CR>", { noremap = true, silent = true })
 
---pane navigation
-keymap.set("n", "<c-h>", "<c-w>h", opts) -- navigate left
-keymap.set("n", "<c-j>", "<c-w>j", opts) -- navigate down
-keymap.set("n", "<c-k>", "<c-w>k", opts) -- navigate up
-keymap.set("n", "<c-l>", "<c-w>l", opts) -- navigate right
-keymap.set("n", "<c-tab>", ":bn<cr>", { noremap = true })
 -- window management
 keymap.set("n", "<leader>sv", ":vsplit<cr>", opts)                     -- split vertical
 keymap.set("n", "<leader>sh", ":split<cr>", opts)                      -- split horizontally
@@ -43,13 +37,11 @@ keymap.set('n', '<tab>', ":bufferlinecyclenext<cr>", { noremap = true, silent = 
 keymap.set('n', '<s-tab>', ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
 keymap.set('n', '<c-x>', ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
 --
-keymap.set('n', '<c-d>', "vi'", { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-f>', 'vi"', { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-b>', 'vib', { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-a>', 'vi<', { nowait = true, remap = true, silent = true })
+keymap.set('n', "<c-'>", "vi'", { nowait = true, remap = true, silent = true })
+keymap.set('n', '<c-v>', 'vi"', { nowait = true, remap = true, silent = true })
+ 
+keymap.set('n', '<c-<>', 'vi<', { nowait = true, remap = true, silent = true })
 --
-keymap.set('n', '<c-k>', '3k', { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-j>', '3j', { nowait = true, remap = true, silent = true })
 keymap.set('n', '<return>', 'o', { nowait = true, remap = true, silent = true })
 
 -- debugger

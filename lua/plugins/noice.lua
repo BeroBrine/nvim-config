@@ -1,5 +1,9 @@
-return
-{
+local config = function() 
+  require('notify').setup({
+    background_colour = "#000000"
+  })
+end
+return {
   -- lazy.nvim
   {
     "folke/noice.nvim",
@@ -10,6 +14,7 @@ return
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
       "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify"
       -- OPTIONAL:
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
@@ -20,9 +25,9 @@ return
       --     {
       --       background_colour = "#000000"
       --     })
-        -- end,
-      
-        
+      -- end,
+
+
 
 
     },
