@@ -43,6 +43,7 @@
   "rose-pine": { "branch": "main", "commit": "9d7474f80afe2f0cfcb4fabfc5451f509d844b85" },
   "solarized-osaka.nvim": { "branch": "main", "commit": "f6e66670e31c09cfb7142a16d5dc2f26d2a31a40" },
   "startup.nvim": { "branch": "master", "commit": "c6ba324f9eba0c23b675b53af431346aab893268" },
+  "tagalong.vim": { "branch": "main", "commit": "5a2bbf2b1d5b657685a49d48d98a4aa921c1fde3" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "todo-comments.nvim": { "branch": "main", "commit": "833d8dd8b07eeda37a09e99460f72a02616935cb" },
   "tokyonight.nvim": { "branch": "main", "commit": "610179f7f12db3d08540b6cc61434db2eaecbcff" },

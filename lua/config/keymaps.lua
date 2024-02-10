@@ -5,9 +5,9 @@ keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { noremap = true, silent = t
 keymap.set("n", "<leader>nb", ":Neotree buffers<CR>", { noremap = true, silent = true })
 
 -- window management
-keymap.set("n", "<leader>sv", ":vsplit<cr>", opts)                     -- split vertical
-keymap.set("n", "<leader>sh", ":split<cr>", opts)                      -- split horizontally
-keymap.set("n", "<leader>sm", ":maximizetoggle<cr>", opts)             -- toggle minimize
+keymap.set("n", "<leader>sv", ":vsplit<cr>", opts) -- split vertical
+keymap.set("n", "<leader>sh", ":split<cr>", opts) -- split horizontally
+keymap.set("n", "<leader>sm", ":maximizetoggle<cr>", opts) -- toggle minimize
 keymap.set("n", "<c-c>", ":q!<cr>", { noremap = true, silent = true }) -- toggle minimize
 --keys
 keymap.set("i", "<c-j>", "<down>", { noremap = true, silent = true })
@@ -24,29 +24,29 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 --undo tree
-keymap.set('n', '<leader-f5>', vim.cmd.undotreetoggle)
+keymap.set("n", "<leader-f5>", vim.cmd.undotreetoggle)
 
 -- lsp buffer show
-keymap.set('n', '<leader>m', ":lua vim.lsp.buf.hover()<cr>", { noremap = true, silent = true })
-keymap.set('n', '<c-s>', ":w<cr>", { noremap = true, silent = true })
-keymap.set('n', '<c-q>a', ":wqa<cr>", { noremap = true, silent = true })
-keymap.set('n', '<c-q>s', ":wq<cr>", { noremap = true, silent = true })
-keymap.set('n', '<c-q>w', ":q!<cr>", { noremap = true, silent = true })
+keymap.set("n", "<leader>m", ":lua vim.lsp.buf.hover()<cr>", { noremap = true, silent = true })
+keymap.set("n", "<c-s>", ":w<cr>", { noremap = true, silent = true })
+keymap.set("n", "<c-q>a", ":wqa<cr>", { noremap = true, silent = true })
+keymap.set("n", "<c-q>s", ":wq<cr>", { noremap = true, silent = true })
+keymap.set("n", "<c-q>w", ":q!<cr>", { noremap = true, silent = true })
 -- bufferline
-keymap.set('n', '<tab>', ":bufferlinecyclenext<cr>", { noremap = true, silent = true })
-keymap.set('n', '<s-tab>', ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
-keymap.set('n', '<c-x>', ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
+keymap.set("n", "<tab>", ":bufferlinecyclenext<cr>", { noremap = true, silent = true })
+keymap.set("n", "<s-tab>", ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
+keymap.set("n", "<c-x>", ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
 --
-keymap.set('n', "<c-'>", "vi'", { nowait = true, remap = true, silent = true })
-keymap.set('n', '<c-v>', 'vi"', { nowait = true, remap = true, silent = true })
- 
-keymap.set('n', '<c-<>', 'vi<', { nowait = true, remap = true, silent = true })
+keymap.set("n", "<c-'>", "vi'", { nowait = true, remap = true, silent = true })
+keymap.set("n", "<c-e>", 'vi"', { nowait = true, remap = true, silent = true })
+
+keymap.set("n", "<c-<>", "vi<", { nowait = true, remap = true, silent = true })
 --
-keymap.set('n', '<return>', 'o', { nowait = true, remap = true, silent = true })
+keymap.set("n", "<return>", "o", { nowait = true, remap = true, silent = true })
 
 -- debugger
-vim.keymap.set('n', '<leader>dc', ":DapContinue<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>ds', ":DapStepOver<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>di', ":DapStepInto<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>do', ":DapStepOut<CR>", { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>db', ":DapToggleBreakpoint<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ds", ":DapStepOver<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>do", ":DapStepOut<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true, silent = true })

@@ -82,7 +82,7 @@ return {
             CursorLineNr = { fg = colors.red },
             Comment = { fg = colors.gray },
             NotifyBackground = { bg = "#000000" },
-            NeoTreeIndentMarker = {fg = colors.white}
+            NeoTreeIndentMarker = { fg = colors.white }
           }
         end,
 
@@ -103,5 +103,43 @@ return {
       -- setup must be called before loading
       vim.cmd.colorscheme "catppuccin"
     end
-  }
+  },
+  {
+    "neanias/everforest-nvim",
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+  },
+  {
+
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    lazy = false,
+
+  },
+
+  {
+
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000, -- Ensure it loads first
+    lazy = false,
+
+  },
+
+  {
+
+    "rebelot/kanagawa.nvim",
+    priority = 1000, -- Ensure it loads first
+    lazy = false,
+
+  },
+
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+
+  },
+
 }
