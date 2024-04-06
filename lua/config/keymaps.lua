@@ -40,15 +40,11 @@ keymap.set("n", "<c-x>", ":bufferlinecloseothers<cr>", { noremap = true, silent 
 keymap.set("n", "<c-'>", "vi'", { nowait = true, remap = true, silent = true })
 keymap.set("n", "<c-e>", 'vi"', { nowait = true, remap = true, silent = true })
 keymap.set("n", "<c-g>", "vi{", { nowait = true, remap = true, silent = true })
+keymap.set("n", "<c-p>", "vi(", { nowait = true, remap = true, silent = true })
 
 keymap.set("n", "<c-<>", "vi<", { nowait = true, remap = true, silent = true })
 --
 keymap.set("n", "<return>", "o", { nowait = true, remap = true, silent = true })
-keymap.set("i", "<c-b>", "```", { nowait = true, remap = true, silent = true })
-
--- debugger
-vim.keymap.set("n", "<leader>dc", ":DapContinue<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ds", ":DapStepOver<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>di", ":DapStepInto<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>do", ":DapStepOut<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { noremap = true, silent = true })
+keymap.set("i", "<c-b>", "``", { nowait = true, remap = true, silent = true })
+keymap.set("i", "<c-v>", "`", { nowait = true, remap = true, silent = true })
+keymap.set("i", "<c-q>", "res.status().json({msg: ''})", { nowait = true, remap = true, silent = true })
