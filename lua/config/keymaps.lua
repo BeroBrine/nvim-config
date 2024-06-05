@@ -37,7 +37,7 @@ keymap.set("n", "<tab>", ":bufferlinecyclenext<cr>", { noremap = true, silent = 
 keymap.set("n", "<s-tab>", ":bufferlinecycleprev<cr>", { noremap = true, silent = true })
 keymap.set("n", "<c-x>", ":bufferlinecloseothers<cr>", { noremap = true, silent = true })
 --
-keymap.set("n", "<c-'>", "vi'", { nowait = true, remap = true, silent = true })
+keymap.set("n", "<c-n>", "vi'", { nowait = true, remap = true, silent = true })
 keymap.set("n", "<c-e>", 'vi"', { nowait = true, remap = true, silent = true })
 keymap.set("n", "<c-g>", "vi{", { nowait = true, remap = true, silent = true })
 keymap.set("n", "<c-p>", "vi(", { nowait = true, remap = true, silent = true })

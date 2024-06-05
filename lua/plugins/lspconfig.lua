@@ -176,9 +176,17 @@ return {
 			},
 		})
 
-		lspconfig["java_language_server"].setup({
+		lspconfig["jdtls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			handlers = {
+				["language/status"] = function(_, result)
+					vim.print("***")
+				end,
+				["$/progress"] = function(_, result, ctx)
+					vim.print("---")
+				end,
+			},
 		})
 
 		lspconfig["prismals"].setup({
