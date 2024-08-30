@@ -24,8 +24,8 @@ opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
 opt.fillchars = {
-  eob = " ",
-  vert = "|",
+	eob = " ",
+	vert = "|",
 }
 -- behaviour
 opt.hidden = true
@@ -38,11 +38,11 @@ opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
-opt.mouse:append('a')
+opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
 opt.mousemoveevent = true
-
+vim.g.root_spec = { "cwd" }
 
 -- font and size

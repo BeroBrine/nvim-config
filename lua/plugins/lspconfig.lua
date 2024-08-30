@@ -78,9 +78,32 @@ return {
 		})
 
 		-- configure typescript server with plugin
+
+		lspconfig["biome"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			root_dir = util.root_pattern("yarn.lock"),
+			-- 	handlers = {
+			-- 		["textDocument/publishDiagnostics"] = function(_, params, client_id, _, config)
+			-- 			if params.diagnostics ~= nil then
+			-- 				local idx = 1
+			-- 				while idx <= #params.diagnostics do
+			-- 					if params.diagnostics[idx].code == 80001 then
+			-- 						table.remove(params.diagnostics, idx)
+			-- 					else
+			-- 						idx = idx + 1
+			-- 					end
+			-- 				end
+			-- 			end
+			-- 			vim.lsp.diagnostic.on_publish_diagnostics(_, params, client_id, _, config)
+			-- 		end,
+			-- 	},
+		})
+
 		lspconfig["tsserver"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			root_dir = util.root_pattern("yarn.lock"),
 			handlers = {
 				["textDocument/publishDiagnostics"] = function(_, params, client_id, _, config)
 					if params.diagnostics ~= nil then
@@ -152,14 +175,31 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			root_dir = util.root_pattern("cp.cp"),
+		})
+
+		lspconfig["matlab_ls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "matlab" },
+			settings = {
+				matlab = {
+					indexWorkspace = true,
+					installPath = "/opt/matlab2021b",
+				},
+				single_file_support = true,
+			},
 		})
 
 		lspconfig["tailwindcss"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+			root_dir = util.root_pattern("yarn.lock"),
 		})
 
 		lspconfig["rust_analyzer"].setup({

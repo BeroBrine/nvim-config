@@ -1,0 +1,204 @@
+snippet cp "Test" b
+#include <bits/stdc++.h>
+#define sz(a) ((int)(a).size())
+#define pb(a) push_back(a)
+#define char unsigned char
+#define mod (1e9 + 9)
+#define nl "\n"
+#define sp " "
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+
+void helper() {
+	$1
+}
+
+
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  ll n;
+  cin >> n;
+  for (ll tt = 1; tt <= n; ++tt) {
+    helper();
+  }
+	return 0;
+}
+endsnippet
+
+
+snippet binpow "binary exponentation" b
+ll binPow(ll a, ll b, ll m) {
+  if (b == 0)
+    return 1;
+  if (b % 2 == 0) {
+    ll t = binPow(a, b / 2, m);
+    return (1ll * t * t) % m;
+  } else {
+    ll t = binPow(a, (b - 1) / 2, m);
+    t = (1ll * t * t) % m;
+    return (1ll * a * t) % m;
+  }
+}
+endsnippet
+
+snippet gcd "greatest common divisor in O(log(max(a , b))) time" b
+ll gcd(ll a, ll b) {
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
+}
+endsnippet
+
+
+
+snippet seive "seive of eratho" b
+int N = 1e5;
+vector<int> primes(N, 0);
+void seive() {
+  for (ll i = 2; i <= N; ++i) {
+    if (primes[i])
+      continue;
+    for (ll u = 2 * i; u <= N; u += i) {
+      primes[u] = i;
+    }
+  }
+}
+endsnippet
+
+
+
+snippet vec "single vector" b
+vector<int> vec($1 , 0);
+endsnippet
+
+
+
+snippet kmp "kmp algo" b
+class KMP {
+public:
+  KMP() {}
+
+  vector<int> genPrefix(string str) {
+    int n = sz(str);
+    vector<int> _pi(n, 0);
+    for (int _i = 1; _i < sz(str); ++_i) {
+      int _j = _pi[_i - 1];
+      while (_j > 0 and str[_i] != str[_j]) {
+        _j = _pi[_j - 1];
+      }
+      if (str[_i] == str[_j]) {
+        _j++;
+      }
+      _pi[_i] = _j;
+    }
+    return _pi;
+  }
+
+  vector<int> kmpSearch(string s, string p) {
+    int n, m, j = 0;
+    n = sz(s);
+    m = sz(p);
+    vector<int> locArr;
+    vector<int> pi = genPrefix(p);
+    for (int i = 0; i < n; ++i) {
+      while (j > 0 and s[i] != p[j])
+        j = pi[j - 1];
+      if (s[i] == p[j]) {
+        j++;
+      }
+      if (j == m) {
+        cout << (i - j) + 1 << nl;
+      }
+    }
+    return locArr;
+  }
+};
+endsnippet 
+
+snippet dvec "double vector" b
+int rows = $1;
+int cols = $1;
+vector<vector<int>> vec(rows , vector<int>(cols , 0));
+endsnippet
+
+snippet pdouble "print 2d vector" b
+for (vector<int> vec : arr) {
+	for (int in : vec) {
+		cout << in << " ";
+	}
+	cout << nl;
+}
+endsnippet
+
+snippet psingle "print single vector" b 
+for (ll i = 0; i < sz(vec); ++i) {
+	cout << vec[i] << " ";
+}
+endsnippet
+
+
+snippet cpstring "cp with input as string" b
+#include <bits/stdc++.h>
+#define sz(a) ((int)(a).size())
+#define char unsigned char
+#define pb(a) push_back(a)
+#define mod (1e9 + 9)
+#define nl "\n"
+#define sp " "
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+
+void helper(string str) {
+	ll len = str.size();
+	$1
+}
+
+
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+	string str;
+  cin >> str; 
+	helper(str);
+	return 0;
+}
+endsnippet
+
+snippet cpfor "for loop multiple" b
+#include <bits/stdc++.h>
+#define sz(a) ((int)(a).size())
+#define char unsigned char
+#define pb(a) push_back(a)
+#define mod (1e9 + 9)
+#define nl "\n"
+#define sp " "
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  ll n; 
+  cin >> n; 
+	for(ll tt = 1 ; tt <= n ; ++tt) {
+		ll a; 
+		cin >> a;
+		$1
+	}
+	return 0;
+}
+endsnippet
+
+
+
+snippet fornotequal "for loop < " b
+for(ll $1 = 0; $1 < $2 ; ++$1) {
+
+}
+endsnippet
